@@ -11,14 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141121075707) do
+ActiveRecord::Schema.define(version: 20141121232044) do
 
   create_table "characters", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "info_sheets", force: true do |t|
+    t.string   "name"
+    t.string   "align"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

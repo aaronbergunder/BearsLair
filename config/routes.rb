@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
-  devise_scope :user do
-    root 'character#show'
-  end
+  resources :characters
+
+  root 'characters#index'
+  
 
 
   resources :character
