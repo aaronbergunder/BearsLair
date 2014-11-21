@@ -1,20 +1,9 @@
 Rails.application.routes.draw do
 
   devise_scope :user do
-    root 'devise/sessions#new'
+    root 'character#show'
   end
 
-  get 'character/new'
-
-  get 'character/create'
-
-  get 'character/index'
-
-  get 'character/show'
-
-  get 'character/edit'
-
-  get 'character/update'
 
   resources :character
 
