@@ -15,3 +15,9 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+$(document).ready ->
+  $("#character").on("ajax:success", (e, data, status, xhr) ->
+    $("#character").append xhr.responseText
+  ).on "ajax:error", (e, xhr, status, error) ->
+    $("#character").append "<p>ERROR</p>"
