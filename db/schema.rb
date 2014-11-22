@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 20141121232044) do
 
   create_table "characters", force: true do |t|
     t.string   "name"
-    t.string   "align"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
