@@ -16,8 +16,9 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
-$(document).ready ->
+$(document).ready {
   $("#character").on("ajax:success", (e, data, status, xhr) ->
-    $("#character").append xhr.responseText
+    $("#alert_placeholder").append ('<div id="alertdiv" class="alert ' +  alerttype + '"><a class="close" data-dismiss="alert">×</a><span>'+xhr+'</span></div>')
   ).on "ajax:error", (e, xhr, status, error) ->
-    $("#character").append "<p>ERROR</p>"
+    $("#alert_placeholder").append "<p>ERROR</p>"
+}
