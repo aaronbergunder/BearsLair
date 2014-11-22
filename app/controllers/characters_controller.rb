@@ -18,6 +18,7 @@ class CharactersController < ApplicationController
   end
 
   def edit
+    @character = Character.find(params[:id])
   end
 
   def create
@@ -42,6 +43,6 @@ class CharactersController < ApplicationController
     end
 
     def character_params
-      params.require(:character).permit(:name, :align)
+      params.require(:character).permit(:name, :aligment, :race, :charclass, :gender, :size, :height, :weight, :deity, :homeland, :hair, :eyes)
     end
 end
