@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :infosheets
-
   resources :characters
 
   root 'characters#index'

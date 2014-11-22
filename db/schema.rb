@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141122012629) do
+ActiveRecord::Schema.define(version: 20141122014109) do
 
   create_table "characters", force: true do |t|
     t.string   "name"
@@ -20,6 +20,16 @@ ActiveRecord::Schema.define(version: 20141122012629) do
     t.string   "race"
     t.string   "charclass"
     t.integer  "level"
+    t.string   "deity"
+    t.string   "homeland"
+    t.string   "size"
+    t.string   "gender"
+    t.string   "age"
+    t.string   "height"
+    t.string   "weight"
+    t.string   "hair"
+    t.string   "eyes"
+    t.string   "alignment"
   end
 
   create_table "infosheets", force: true do |t|

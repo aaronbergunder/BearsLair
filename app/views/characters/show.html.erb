@@ -10,9 +10,37 @@
   <%= @character.race %>
 </p>
 
-<div class="col-xs-3">
-  <%= link_to 'Info', infosheets %>
-  </div>
+<p>
+  <strong>Class:</strong>
+  <%= @character.charclass %>
+</p>
 
+<div class="col-xs-2">
+<%= @character.age %>
+</div>
+<div class="col-xs-2">
+<%= @character.deity %>
+</div>
+<div class="col-xs-2">
+<%= @character.size %>
+</div>
+<div class="col-xs-2">
+<%= @character.homeland %>
+</div>
+<div class="col-xs-2">
+<%= @character.height %>
+</div>
+<div class="col-xs-2">
+<%= @character.weight %>
+</div>
+<div class="col-xs-2">
+<%= @character.hair %>
+</div>
+<div class="col-xs-2">
+<%= @character.eyes %>
+</div>
+<div class="col-xs-2">
+<%= @character.alignment %>
+</div>
 <%= link_to 'Edit', edit_character_path(@character) %> |
 <%= link_to 'Back', characters_path %>
