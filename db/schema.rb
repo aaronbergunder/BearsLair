@@ -11,13 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141121232044) do
+ActiveRecord::Schema.define(version: 20141122012629) do
 
   create_table "characters", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "race"
+    t.string   "charclass"
+    t.integer  "level"
   end
+
+  create_table "infosheets", force: true do |t|
+    t.string   "deity"
+    t.string   "homeland"
+    t.string   "size"
+    t.string   "gender"
+    t.string   "age"
+    t.string   "height"
+    t.string   "weight"
+    t.string   "hair"
+    t.string   "eyes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "character_id"
+  end
+
+  add_index "infosheets", ["character_id"], name: "index_infosheets_on_character_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

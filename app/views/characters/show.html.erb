@@ -6,9 +6,13 @@
 </p>
 
 <p>
-  <strong>Align:</strong>
-  <%= @character.align %>
+  <strong>Race:</strong>
+  <%= @character.race %>
 </p>
+
+<div class="col-xs-3">
+  <%= link_to 'Info', infosheets %>
+  </div>
 
 <%= link_to 'Edit', edit_character_path(@character) %> |
 <%= link_to 'Back', characters_path %>

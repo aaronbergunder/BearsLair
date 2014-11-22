@@ -7,3 +7,5 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
+Character.create(name: 'Faenglas', race: 'Elf', charclass: 'Wizard', level: 9)
+Infosheet.create(deity: 'Cayden Cailean', homeland: '', size: 'reg', gender: 'm', age: '114', height: '72', weight: '176', hair: 'white', eyes: 'white')

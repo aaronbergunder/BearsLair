@@ -1,0 +1,2 @@
+module InfosheetsHelper
+end
