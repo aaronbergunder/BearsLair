@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Character:</strong>
+  <%= @statussheet.character %>
+</p>
+
+<p>
+  <strong>Maxhp:</strong>
+  <%= @statussheet.maxhp %>
+</p>
+
+<p>
+  <strong>Curhp:</strong>
+  <%= @statussheet.curhp %>
+</p>
+
+<p>
+  <strong>Speed:</strong>
+  <%= @statussheet.speed %>
+</p>
+
+<p>
+  <strong>Nonlthdmg:</strong>
+  <%= @statussheet.nonlthdmg %>
+</p>
+
+<p>
+  <strong>Initiative:</strong>
+  <%= @statussheet.initiative %>
+</p>
+
+<%= link_to 'Edit', edit_statussheet_path(@statussheet) %> |
+<%= link_to 'Back', statussheets_path %>

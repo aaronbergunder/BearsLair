@@ -1,13 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  character_id: 
   maxhp: 1
   curhp: 1
+  speed: 1
   nonlthdmg: 1
   initiative: 1
 
 two:
+  character_id: 
   maxhp: 1
   curhp: 1
+  speed: 1
   nonlthdmg: 1
   initiative: 1

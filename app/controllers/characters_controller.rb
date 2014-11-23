@@ -29,6 +29,22 @@ class CharactersController < ApplicationController
 
   def update
     @character.update(character_params)
+
+    respond_to do |format|
+      if @character.save
+
+        format.html { 
+          flash[:success] = 'saved successfully'
+          redirect_to products_url
+        }
+        format.js
+      else
+        render :new
+        format.html { render :new }
+        format.js   { render :js=>'alert("ajax error");' }
+      end
+    end
+
     respond_with(@character)
   end
 

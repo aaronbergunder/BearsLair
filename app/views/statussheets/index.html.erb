@@ -1,0 +1,35 @@
+<h1>Listing statussheets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Character</th>
+      <th>Maxhp</th>
+      <th>Curhp</th>
+      <th>Speed</th>
+      <th>Nonlthdmg</th>
+      <th>Initiative</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @statussheets.each do |statussheet| %>
+      <tr>
+        <td><%= statussheet.character.name %></td>
+        <td><%= statussheet.maxhp %></td>
+        <td><%= statussheet.curhp %></td>
+        <td><%= statussheet.speed %></td>
+        <td><%= statussheet.nonlthdmg %></td>
+        <td><%= statussheet.initiative %></td>
+        <td><%= link_to 'Show', statussheet %></td>
+        <td><%= link_to 'Edit', edit_statussheet_path(statussheet) %></td>
+        <td><%= link_to 'Destroy', statussheet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Statussheet', new_statussheet_path %>

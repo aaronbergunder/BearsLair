@@ -1,0 +1,41 @@
+<%= form_for(@statussheet) do |f| %>
+  <% if @statussheet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@statussheet.errors.count, "error") %> prohibited this statussheet from being saved:</h2>
+
+      <ul>
+      <% @statussheet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :character_id %><br>
+    <%= f.text_field :character_id %>
+  </div>
+  <div class="field">
+    <%= f.label :maxhp %><br>
+    <%= f.number_field :maxhp %>
+  </div>
+  <div class="field">
+    <%= f.label :curhp %><br>
+    <%= f.number_field :curhp %>
+  </div>
+  <div class="field">
+    <%= f.label :speed %><br>
+    <%= f.number_field :speed %>
+  </div>
+  <div class="field">
+    <%= f.label :nonlthdmg %><br>
+    <%= f.number_field :nonlthdmg %>
+  </div>
+  <div class="field">
+    <%= f.label :initiative %><br>
+    <%= f.number_field :initiative %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

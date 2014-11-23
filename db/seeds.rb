@@ -8,3 +8,4 @@
 
 
 Character.create(name: 'Faenglas', race: 'Elf', charclass: 'Wizard', level: '9', deity: 'Cayden Cailean', homeland: 'that place', size: 'reg', gender: 'm', age: '114', height: '72', weight: '176', hair: 'white', eyes: 'white', alignment: 'NG')
+Statussheet.create(maxhp: 52, curhp: 16, speed: 25, nonlthdmg: 0, character_id: 1, initiative: 18)

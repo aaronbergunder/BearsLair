@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :skillsheets
+
+  resources :statussheets
+
   resources :characters
 
   root 'characters#index'

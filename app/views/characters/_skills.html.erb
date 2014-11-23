@@ -1,8 +1,8 @@
-<% @statussheet = Statussheet.find (params[:id]) %>
-<%= form_for(@statussheet) do |f| %>
-  <% if @statussheet.errors.any? %>
+<% @skillsheet = Skillsheet.find (params[:id]) %>
+<%= form_for(@skillsheet) do |f| %>
+  <% if @skillsheet.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@statussheet.errors.count, "error") %> prohibited this character from being saved:</h2>
+      <h2><%= pluralize(@skillsheet.errors.count, "error") %> prohibited this character from being saved:</h2>
 
       <ul>
       <% @character.errors.full_messages.each do |message| %>
@@ -14,32 +14,32 @@
   <div class="row">
     <div class="col-sm-2">
       <div class="field">
-        <%= f.label :maxhp %><br>
-        <%= f.text_field :maxhp %>
+        <%= f.label :acrobTot %><br>
+        <%= f.text_field :acrobTot %>
       </div>
     </div>
     <div class="col-sm-2">
       <div class="field">
-        <%= f.label :curhp %><br>
-        <%= f.text_field :curhp %>
+        <%= f.label :appraTot %><br>
+        <%= f.text_field :appraTot %>
       </div>
     </div>
     <div class="col-sm-2">
       <div class="field">
-        <%= f.label :initiative %><br>
-        <%= f.text_field :initiative %>
+        <%= f.label :bluffTot %><br>
+        <%= f.text_field :bluffTot %>
       </div>
     </div>
     <div class="col-sm-2">
       <div class="field">
-        <%= f.label :speed %><br>
-        <%= f.text_field :speed %>
+        <%= f.label :climbTot %><br>
+        <%= f.text_field :climbTot %>
       </div>
     </div>
     <div class="col-sm-2">
       <div class="field">
-        <%= f.label :nonlthdmg %><br>
-        <%= f.text_field :nonlthdmg %>
+        <%= f.label :diploTot %><br>
+        <%= f.text_field :diploTot %>
       </div>
     </div>
     
