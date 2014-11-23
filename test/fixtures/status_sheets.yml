@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  maxhp: 1
+  curhp: 1
+  nonlthdmg: 1
+  initiative: 1
+
+two:
+  maxhp: 1
+  curhp: 1
+  nonlthdmg: 1
+  initiative: 1
