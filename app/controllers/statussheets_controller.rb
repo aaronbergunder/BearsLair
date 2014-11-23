@@ -42,6 +42,6 @@ class StatussheetsController < ApplicationController
     end
 
     def statussheet_params
-      params.require(:statussheet).permit(:character_id, :maxhp, :curhp, :speed, :nonlthdmg, :initiative)
+      params.require(:statussheet).permit!
     end
 end

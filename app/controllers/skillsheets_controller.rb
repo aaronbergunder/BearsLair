@@ -42,6 +42,6 @@ class SkillsheetsController < ApplicationController
     end
 
     def skillsheet_params
-      params.require(:skillsheet).permit(:character_id)
+      params.require(:skillsheet).permit!
     end
 end
