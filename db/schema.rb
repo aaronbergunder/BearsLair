@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141123033647) do
+ActiveRecord::Schema.define(version: 20141124044717) do
 
   create_table "characters", force: true do |t|
     t.string   "name"
@@ -196,6 +196,30 @@ ActiveRecord::Schema.define(version: 20141123033647) do
   end
 
   add_index "skillsheets", ["character_id"], name: "index_skillsheets_on_character_id"
+
+  create_table "spells", force: true do |t|
+    t.integer  "spellsheet_id"
+    t.string   "attack"
+    t.string   "range"
+    t.string   "splevel"
+    t.string   "duration"
+    t.boolean  "memorized"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "saveDC"
+    t.string   "spType"
+    t.string   "name"
+  end
+
+  add_index "spells", ["spellsheet_id"], name: "index_spells_on_spellsheet_id"
+
+  create_table "spellsheets", force: true do |t|
+    t.integer  "character_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "spellsheets", ["character_id"], name: "index_spellsheets_on_character_id"
 
   create_table "statussheets", force: true do |t|
     t.integer  "character_id"

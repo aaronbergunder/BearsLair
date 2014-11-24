@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Spellsheet:</strong>
+  <%= @spell.spellsheet %>
+</p>
+
+<p>
+  <strong>Attack:</strong>
+  <%= @spell.attack %>
+</p>
+
+<p>
+  <strong>Range:</strong>
+  <%= @spell.range %>
+</p>
+
+<p>
+  <strong>Save:</strong>
+  <%= @spell.saveDC %>
+</p>
+
+<p>
+  <strong>Splevel:</strong>
+  <%= @spell.splevel %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @spell.duration %>
+</p>
+
+<p>
+  <strong>Memorized:</strong>
+  <%= @spell.memorized %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @spell.spType %>
+</p>
+
+<%= link_to 'Edit', edit_spell_path(@spell) %> |
+<%= link_to 'Back', spells_path %>

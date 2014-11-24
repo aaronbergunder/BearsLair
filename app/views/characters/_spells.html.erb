@@ -1,0 +1,53 @@
+<% @spellsheet = Spellsheet.find (params[:id]) %>
+<% @spells = @spellsheet.spells.all %>
+<%= form_for(@spells) do |f| %>
+  <% if @spells.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@spells.errors.count, "error") %> prohibited this character from being saved:</h2>
+
+      <ul>
+      <% @spells.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="row">
+    <div class="col-sm-2">
+      <div class="field">
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="field">
+        <%= f.label :attack %><br>
+        <%= f.text_field :attack %>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="field">
+        <%= f.label :range %><br>
+        <%= f.text_field :range %>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="field">
+        <%= f.label :duration %><br>
+        <%= f.text_field :duration %>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="field">
+        <%= f.label :memorized %><br>
+        <%= f.check_box :memorized %>
+      </div>
+    </div>
+    
+    
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+

@@ -1,0 +1,49 @@
+<%= form_for(@spell) do |f| %>
+  <% if @spell.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@spell.errors.count, "error") %> prohibited this spell from being saved:</h2>
+
+      <ul>
+      <% @spell.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :spellsheet_id %><br>
+    <%= f.text_field :spellsheet_id %>
+  </div>
+  <div class="field">
+    <%= f.label :attack %><br>
+    <%= f.text_field :attack %>
+  </div>
+  <div class="field">
+    <%= f.label :range %><br>
+    <%= f.text_field :range %>
+  </div>
+  <div class="field">
+    <%= f.label :saveDC %><br>
+    <%= f.text_field :saveDC %>
+  </div>
+  <div class="field">
+    <%= f.label :splevel %><br>
+    <%= f.text_field :splevel %>
+  </div>
+  <div class="field">
+    <%= f.label :duration %><br>
+    <%= f.text_field :duration %>
+  </div>
+  <div class="field">
+    <%= f.label :memorized %><br>
+    <%= f.check_box :memorized %>
+  </div>
+  <div class="field">
+    <%= f.label :spType %><br>
+    <%= f.text_field :spType %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
