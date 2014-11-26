@@ -1,3 +1,4 @@
+<div class="form-group">
 <% @spells = Spell.find (params[:id]) %>
 <%= form_for(@spells) do |f| %>
   <% if @spells.errors.any? %>
@@ -15,31 +16,31 @@
     <div class="col-sm-2">
       <div class="field">
         <%= f.label :name %><br>
-        <%= f.text_field :name %>
+        <%= f.text_field :name, class: 'form-control' %>
       </div>
     </div>
     <div class="col-sm-2">
       <div class="field">
         <%= f.label :attack %><br>
-        <%= f.text_field :attack %>
+        <%= f.text_field :attack, class: 'form-control'  %>
       </div>
     </div>
     <div class="col-sm-2">
       <div class="field">
         <%= f.label :range %><br>
-        <%= f.text_field :range %>
+        <%= f.text_field :range, class: 'form-control'  %>
       </div>
     </div>
     <div class="col-sm-2">
       <div class="field">
         <%= f.label :duration %><br>
-        <%= f.text_field :duration %>
+        <%= f.text_field :duration, class: 'form-control'  %>
       </div>
     </div>
     <div class="col-sm-2">
       <div class="field">
         <%= f.label :memorized %><br>
-        <%= f.check_box :memorized %>
+        <%= f.check_box :memorized, class: 'checkbox'  %>
       </div>
     </div>
     
@@ -49,4 +50,5 @@
     <%= f.submit %>
   </div>
 <% end %>
+</div>
 
