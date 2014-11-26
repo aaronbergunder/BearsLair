@@ -1,5 +1,4 @@
-<% @spellsheet = Spellsheet.find (params[:id]) %>
-<% @spells = @spellsheet.spells.all %>
+<% @spells = Spell.find (params[:id]) %>
 <%= form_for(@spells) do |f| %>
   <% if @spells.errors.any? %>
     <div id="error_explanation">

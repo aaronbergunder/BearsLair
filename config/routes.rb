@@ -2,8 +2,6 @@ Rails.application.routes.draw do
 
   resources :spells
 
-  resources :spellsheets
-
   resources :skillsheets
 
   resources :statussheets

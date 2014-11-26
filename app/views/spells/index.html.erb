@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Spellsheet</th>
+      <th>Name</th>
       <th>Attack</th>
       <th>Range</th>
       <th>Save</th>
@@ -18,7 +18,7 @@
   <tbody>
     <% @spells.each do |spell| %>
       <tr>
-        <td><%= spell.spellsheet %></td>
+        <td><%= spell.name %></td>
         <td><%= spell.attack %></td>
         <td><%= spell.range %></td>
         <td><%= spell.saveDC %></td>
