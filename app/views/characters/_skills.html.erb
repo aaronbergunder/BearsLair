@@ -1,4 +1,5 @@
 <% @skillsheet = Skillsheet.find (params[:id]) %>
+<div class="form-group">
 <%= form_for(@skillsheet) do |f| %>
   <% if @skillsheet.errors.any? %>
     <div id="error_explanation">
@@ -42,11 +43,11 @@
         <%= f.text_field :diploTot %>
       </div>
     </div>
-    
-    
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="row">
+    <div class="actions">
+    <%= f.submit 'submit' , :class => 'btn btn-primary' %>
+    </div>
   </div>
 <% end %>
-
+</div>

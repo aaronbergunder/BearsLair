@@ -1,0 +1,43 @@
+<% @statussheet = Statussheet.find (params[:id]) %>
+<%= form_for(@statussheet) do |f| %>
+  <% if @statussheet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@statussheet.errors.count, "error") %> prohibited this character from being saved:</h2>
+
+      <ul>
+      <% @character.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="row">
+    <div class="col-xs-6">
+        <h5>Health</h5>
+        <%= f.text_field :curhp, :class => 'form-control' %>/<%= @statussheet.maxhp %>
+    </div>
+    <div class="col-xs-6">
+      <div class="field">
+        <%= f.label :initiative %><br>
+        <%= f.text_field :initiative, :class => 'form-control' %>
+      </div>
+    </div>
+        <div class="col-xs-6">
+      <div class="field">
+        Non-lethal: <%= f.text_field :nonlthdmg, :class => 'form-control' %>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="field">
+        Speed: <%= @statussheet.speed %>
+      </div>
+    </div>
+
+    
+    
+  </div>
+  <div class="actions">
+    <%= f.submit 'update', :class => 'btn btn-success' %>
+  </div>
+<% end %>
+

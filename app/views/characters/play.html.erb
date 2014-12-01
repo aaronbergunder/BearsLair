@@ -26,7 +26,7 @@ $(document).ready(function(){
 		<%= render 'playinfo' %>
 	</div>
 	<div id="status" class="tab-pane fade">
-		<%= render 'status' %>
+		<%= render 'playstatus' %>
 	</div>
 	<div id="spells" class="tab-pane fade">
 		<%= render 'spells' %>
@@ -41,6 +41,7 @@ $(document).ready(function(){
 		beasts
 	</div>
 </div>
-
-<%= link_to 'Show', @character %> |
-<%= link_to 'Back', characters_path %>
+<div class="col-xs-12">
+	<%= link_to 'Show', @character %> |
+	<%= link_to 'Back', characters_path %>
+</div>
