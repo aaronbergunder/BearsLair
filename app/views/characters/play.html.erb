@@ -2,7 +2,7 @@
 <div id="alert_placeholder">
 </div>
 
-<h1>Editing character</h1>
+<h1><%= @character.name %></h1>
 
 <script type="text/javascript">
 $(document).ready(function(){ 
@@ -23,7 +23,7 @@ $(document).ready(function(){
 </ul>
 <div class="tab-content">
 	<div id="info" class="tab-pane fade in active">
-		<%= render 'info' %>
+		<%= render 'playinfo' %>
 	</div>
 	<div id="status" class="tab-pane fade">
 		<%= render 'status' %>
@@ -42,6 +42,5 @@ $(document).ready(function(){
 	</div>
 </div>
 
-<%= link_to 'Play', @play_character_path %> |
 <%= link_to 'Show', @character %> |
 <%= link_to 'Back', characters_path %>

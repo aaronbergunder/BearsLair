@@ -1,0 +1,49 @@
+<%= form_for(@character, remote: true) do |f| %>
+  <% if @character.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@character.errors.count, "error") %> prohibited this character from being saved:</h2>
+
+      <ul>
+      <% @character.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-xs-2">
+        <h3>Level <%= @character.level %></h3>
+      </div>
+      <div class="col-xs-12">
+        <h3><%= @character.race %>
+          <%= @character.charclass %></h3>
+          <h4><%=  @character.alignment %> by nature</h4>
+        </div>
+      </div>
+      <div class="col-xs-12">
+        <div class="field">
+          <%=  @character.age %> year old <%=  @character.gender %>
+        </div>
+      </div>
+      <div class="col-xs-12">
+        <div class="field">
+          Of <%=  @character.size %> stature at <%=  @character.height %>&quot; tall, weighing <%=  @character.weight %>lbs
+        </div>
+      </div>
+      <div class="col-xs-12">
+        <div class="field">
+         With <%=  @character.hair %> hair and <%=  @character.eyes %> eyes
+        </div>
+      </div>
+      <div class="col-xs-12">
+        <div class="field">
+         Hailing from <%=  @character.homeland %> and worshipping <%=  @character.deity %>
+        </div>
+      </div>
+    </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+</div> <!-- form-group -->
+<% end %>
