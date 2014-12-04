@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20141126192053) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "characters", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -30,7 +33,6 @@ ActiveRecord::Schema.define(version: 20141126192053) do
     t.string   "hair"
     t.string   "eyes"
     t.string   "alignment"
-    t.integer  "char_id"
   end
 
   create_table "skillsheets", force: true do |t|
@@ -195,7 +197,7 @@ ActiveRecord::Schema.define(version: 20141126192053) do
     t.integer  "useMaMod"
   end
 
-  add_index "skillsheets", ["character_id"], name: "index_skillsheets_on_character_id"
+  add_index "skillsheets", ["character_id"], name: "index_skillsheets_on_character_id", using: :btree
 
   create_table "spells", force: true do |t|
     t.integer  "spellsheet_id"
@@ -212,16 +214,8 @@ ActiveRecord::Schema.define(version: 20141126192053) do
     t.integer  "character_id"
   end
 
-  add_index "spells", ["character_id"], name: "index_spells_on_character_id"
-  add_index "spells", ["spellsheet_id"], name: "index_spells_on_spellsheet_id"
-
-  create_table "spellsheets", force: true do |t|
-    t.integer  "character_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "spellsheets", ["character_id"], name: "index_spellsheets_on_character_id"
+  add_index "spells", ["character_id"], name: "index_spells_on_character_id", using: :btree
+  add_index "spells", ["spellsheet_id"], name: "index_spells_on_spellsheet_id", using: :btree
 
   create_table "statussheets", force: true do |t|
     t.integer  "character_id"
@@ -234,7 +228,7 @@ ActiveRecord::Schema.define(version: 20141126192053) do
     t.datetime "updated_at"
   end
 
-  add_index "statussheets", ["character_id"], name: "index_statussheets_on_character_id"
+  add_index "statussheets", ["character_id"], name: "index_statussheets_on_character_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -249,10 +243,9 @@ ActiveRecord::Schema.define(version: 20141126192053) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end
